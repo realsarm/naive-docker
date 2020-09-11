@@ -1,0 +1,10 @@
+services:
+  naive:
+    image: naive
+    restart: always
+    volumes:
+      - ./config:/etc/naiveproxy
+      - ./html:/var/www/html
+    ports:
+      - "80:80"
+      - "443:443"
