@@ -1,0 +1,35 @@
+{
+  "log": {
+    "loglevel": "info"
+  },
+  "inbounds": [
+    {
+      "port": 443,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "<FILL ME>"
+          }
+        ]
+      },
+      "streamSettings": {
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "<FILL ME>",
+          "certificates": [
+            {
+              "certificateFile": "/etc/v2ray/cert.pem",
+              "keyFile": "/etc/v2ray/key.pem"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom"
+    }
+  ]
+}
